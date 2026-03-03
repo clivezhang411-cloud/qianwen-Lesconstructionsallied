@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Constructions Allied Inc. - Solutions de Construction</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- 内部样式：用于修复里程碑布局 -->
+    <style>
+        /* --- 里程碑 Timeline 样式 --- */
+        #milestones .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* 核心：水平排列 */
+        .timeline-item {
+            display: flex;
+            align-items: flex-start; /* 顶部对齐 */
+            margin-bottom: 30px;
+            padding: 10px 0;
+        }
+
+        /* 圆点样式 */
+        .timeline-dot {
+            width: 15px;
+            height: 15px;
+            background-color: #0056b3; /* 与你的主题色保持一致 */
+            border-radius: 50%;
+            margin-top: 5px; /* 视觉微调 */
+            margin-right: 15px; /* 圆点和文字的间距 */
+            flex-shrink: 0; /* 防止被压缩 */
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .timeline-content p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+ <!-- ========== 导航栏开始 ========== -->
+<nav>
+  <div class="nav-container">
+    
+    <!-- 1. LOGO 部分保持不变 -->
+    <div class="logo">
+      <!-- 这里放你的 logo 图片或文字 -->
+      <!-- <img src="logo.png" alt="Logo"> -->
+    </div>
+
+    <!-- 2. 【核心】隐藏的“开关” (CSS汉堡菜单的心脏) -->
+    <!-- 这是一个看不见的复选框，用来记忆菜单的“开/关”状态 -->
+    <!-- 注意：为了防止页面加载时闪烁，我给它加了 style="display:none" -->
+    <input type="checkbox" id="menu-toggle" style="display: none;">
+
+    <!-- 3. 【核心】汉堡按钮 -->
+    <!-- 这就是你看到的“三道杠”图标 -->
+    <!-- for="menu-toggle" 的作用是：点击这个 label 就等于点击了上面的 input -->
+    <label for="menu-toggle" class="menu-toggle">☰</label>
+
+    <!-- 4. 导航菜单 -->
+    <!-- 注意：这里加了一个 class "nav-menu"，用来配合 CSS 控制显示/隐藏 -->
+     <ul class="nav-menu">
+                <li><a href="">Accueil</a ></li>
+                <li><a href="#story">Notre Histoire</a ></li>
+                <li><a href="#services">Products et Services</a ></li>
+                <li><a href="#team">Équipe</a ></li>
+                <li><a href="#milestones">Milestones</a ></li>
+                <li><a href="#projects">Nos Réalisations</a ></li>
+                <li><a href="#contact">Contactez-nous</a ></li>
+    </ul>
+
+
+  </div>
+</nav>
+<!-- ========== 导航栏结束 ========== -->
+
+
+    <!-- 首屏大图 -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Les Constructions Allied Inc.</h1>
+            <p>Issue du voisinage, forgée par le professionnalisme</p >
+            <p><strong>Conçu au Canada, Approvisionné en Chine, Assemblé au Canada</strong></p >
+            <a href="#contact" class="btn">Obtenir un Devis Gratuit</a >
+        </div>
+    </section>
+
+    <!-- 我们的故事 -->
+    <section id="story" class="section">
+        <h2>Notre Histoire</h2>
+        <blockquote>
+            « Confrontés au dilemme des prix locaux élevés et à l'illégalité des produits importés, nous avons créé un modèle commercial unique. »
+        </blockquote>
+        <p>
+            Née d'un projet d'entraide de voisinage à Candiac, Québec, en 2025. Le fondateur, Clive Zhang, a découvert que les matériaux de construction locaux étaient coûteux, tandis que les produits importés directement de Chine ne respectaient souvent pas les normes du bâtiment du Québec.
+        </p >
+        <p>
+            C'est ainsi que nous avons créé le modèle <strong>« Conçu au Canada, Approvisionné en Chine, Assemblé au Canada »</strong>. Une équipe canadienne conçoit pour assurer la conformité, nous achetons directement en Chine des matières premières de haute qualité pour réduire les coûts, et l'assemblage final est effectué au Québec pour garantir une précision artisanale.
+        </p >
+    </section>
+
+   <!-- 产品服务 -->
+<section id="services" class="section">
+    <h2>Produits et Services</h2>
+    <div class="services-container">
+        
+        <!-- 栅栏 -->
+        <div class="service-category">
+            <!-- 图标更换为：fa-border-style (现代线条感) -->
+            <i class="fas fa-border-style" style="font-size: 3rem; color: #0056b3; margin-bottom: 1rem;"></i>
+            <h3>Clôtures</h3>
+            <p>Clôtures de piscine/Jardin/terrasse</p >
+            <div class="fence-subgrid">
+                <div class="fence-item">
+                    <img src="images/fences/pool-fence.JPG" alt="Clôture de Piscine">
+                    <p>Clôture de Piscine</p >
+                </div>
+                <div class="fence-item">
+                    <img src="images/fences/garden-fence.JPG" alt="Clôture de Jardin">
+                    <p>Clôture de Jardin</p >
+                </div>
+                <div class="fence-item">
+                    <img src="images/fences/deck-fence.JPG" alt="Clôture de Terrasse">
+                    <p>Clôture de Terrasse</p >
+                </div>
+            </div>
+        </div>
+
+        <!-- 门窗 -->
+        <div class="service-category">
+            <!-- 图标更换为：fa-vector-square (建筑框架感) -->
+            <i class="fas fa-vector-square" style="font-size: 3rem; color: #0056b3; margin-bottom: 1rem;"></i>
+            <h3>Portes et Fenêtres</h3>
+            <p>Sur mesure en aluminium/PVC</p >
+            <div class="single-img">
+                <img src="images/windows/window-door.JPG" alt="Portes et Fenêtres">
+            </div>
+        </div>
+
+        <!-- 塑木地板 -->
+        <div class="service-category">
+            <!-- 图标更换为：fa-border-all (网格铺装感，去除了树) -->
+            <i class="fas fa-border-all" style="font-size: 3rem; color: #0056b3; margin-bottom: 1rem;"></i>
+            <h3>Planchers de Terrasse</h3>
+            <p>Planchers composites</p >
+            <div class="single-img">
+                <img src="images/deck/deck-floor.JPG" alt="Planchers de Terrasse">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- 团队 -->
+    <section id="team" class="section">
+        <h2>Équipe</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/team/clive.JPG" alt="Clive Zhang">
+                <h3>Clive Zhang</h3>
+                <span class="title">Fondateur et PDG</span>
+                <p>Concepteur du modèle commercial, dirige la conception et la R&D des produits.</p >
+            </div>
+            <div class="team-member">
+                <img src="images/team/real.JPG" alt="Real Trudel">
+                <h3>Real Trudel</h3>
+                <span class="title">Directeur Technique et Qualité</span>
+                <p>Des dizaines d'années d'expérience sur le terrain, garantit la précision artisanale et la sécurité réglementaire.</p >
+            </div>
+            <div class="team-member">
+                <img src="images/team/helen.JPG" alt="Helen Chi">
+                <h3>Helen Chi</h3>
+                <span class="title">DGF et Expert en Supply Chain</span>
+                <p>Responsable de la trésorerie et de l'optimisation de la chaîne d'approvisionnement mondiale.</p >
+            </div>
+        </div>
+    </section>
+
+    <!-- 里程碑 -->
+    <!-- 修正后的里程碑部分，完全保留你提供的文字 -->
+    <section id="milestones" class="section">
+        <h2>Milestones</h2>
+        <div class="timeline">
+            <!-- 里程碑 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Juin 2025 : Validation du Projet</h3>
+                    <p>L'équipe a complété le premier projet de voisinage à Québec, validant le modèle "Design Canadien, Achat Chinois, Assemblage Canadien".</p >
+                </div>
+            </div>
+
+            <!-- 里程碑 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Juin 2025 : Enregistrement de l'Entreprise</h3>
+                    <p>Entreprise officiellement enregistrée, partenariat établi avec la chaîne d'approvisionnement chinoise.</p >
+                </div>
+            </div>
+
+            <!-- 里程碑 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Oct. 2025 : Construction de la Réputation</h3>
+                    <p>20 projets complétés dans la région de Montréal, bonne réputation acquise.</p >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+<style>
+    /* --- Projects 板块专用样式 --- */
+    #projects .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+    #projects h2 {
+        margin-bottom: 30px;
+        color: #333;
+    }
+    .gallery.grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 强制一行两列 -->
+        gap: 25px;
+    }
+    .gallery-item {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+        transform: translateY(-5px);
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 200px; /* 固定高度，让图片整齐划一 -->
+        object-fit: cover; /* 图片自适应裁剪 -->
+        display: block;
+    }
+    .gallery-item p {
+        padding: 15px 10px;
+        margin: 0;
+        font-size: 14px;
+        color: #555;
+    }
+
+    /* 手机端适配：屏幕太窄时变成一列 -->
+    @media (max-width: 600px) {
+        .gallery.grid-2 {
+            grid-template-columns: 1fr; /* 变为单列 -->
+        }
+    }
+</style>
+
+<!-- 项目展示 -->
+<section id="projects" class="section">
+    <style>
+        /* --- 强制内联样式：直接控制布局 --- */
+        #projects .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        #projects h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0D3B66;
+        }
+        
+        /* 核心：强制一行两个 */
+        #projects .gallery.grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 👈 这就是一行两个的关键 -->
+            gap: 25px;
+        }
+        
+        /* 图片卡片：固定大小 -->
+        #projects .gallery-item {
+            height: 250px; /* 👈 图片区域的高度，可以调小这个数字 -->
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* 图片自适应 -->
+        #projects .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 👈 保持比例，填满方框 -->
+        }
+        
+        #projects .gallery-item p {
+            margin: 10px 0 0 0;
+            padding: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* 手机端：变成一列 -->
+        @media (max-width: 600px) {
+            #projects .gallery.grid-2 {
+                grid-template-columns: 1fr; /* 👈 屏幕窄了就变成一行一个 -->
+            }
+        }
+    </style>
+
+    <div class="container">
+        <h2>Nos Réalisations</h2>
+        <div class="gallery grid-2">
+            <!-- 图片 2 -->
+            <div class="gallery-item">
+                <img src="images/projects/project-2.JPG" alt="Clôture en verre pour piscine">
+                <p>Clôture en verre pour piscine</p >
+            </div>
+            <!-- 图片 3 -->
+            <div class="gallery-item">
+                <img src="images/projects/project-3.JPG" alt="Clôture en aluminium pour piscine">
+                <p>Clôture en aluminium pour piscine</p >
+            </div>
+            <!-- 图片 4 -->
+            <div class="gallery-item">
+                <img src="images/projects/project-4.JPG" alt="Clôture Deck">
+                <p>Clôture Deck</p >
+            </div>
+            <!-- 图片 5 -->
+            <div class="gallery-item">
+                <img src="images/projects/project-5.JPG" alt="Clôture de jardin">
+                <p>Clôture de jardin</p >
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 页脚 -->
+    <footer id="contact">
+        <h2>Contactez-nous</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> 438-725-3788</p >
+            <p><i class="fas fa-map-marker-alt"></i> 3683 Boulevard Taschereau, Longueuil, Québec J4T 2G3</p >
+            <p><i class="fas fa-envelope"></i> info@lesconstructionsallied.ca</p >
+        </div>
+        <p class="copyright">© 2026 Les Constructions Allied Inc. Tous droits réservés.</p >
+    </footer>
+</body>
+</html>
