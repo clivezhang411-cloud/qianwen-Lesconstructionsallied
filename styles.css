@@ -37,8 +37,17 @@ nav {
 /* --- LOGO 样式修复：背景色与导航栏一致 --- */
 .logo {
     height: 65px; 
-    padding: 5px 10px; /* 保持图片在容器内的间距 */
+    padding: 5px 10px;
     border-radius: 4px;
+    overflow: hidden; /* 【新增】防止图片溢出 */
+}
+
+/* 【新增】专门控制Logo图片 */
+.logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
 }
 
 /* --- 导航链接样式 --- */
