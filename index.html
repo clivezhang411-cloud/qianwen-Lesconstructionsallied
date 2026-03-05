@@ -147,4 +147,226 @@
         <!-- 门窗 -->
         <div class="service-category">
             <!-- 图标更换为：fa-vector-square (建筑框架感) -->
-            <i class="
+            <i class="fas fa-vector-square" style="font-size: 3rem; color: #0056b3; margin-bottom: 1rem;"></i>
+            <h3>Portes et Fenêtres</h3>
+            <p>Sur mesure en aluminium/PVC</p >
+            <div class="single-img">
+                <img src="images/windows/window-door.jpg" alt="Portes et Fenêtres">
+            </div>
+        </div>
+
+        <!-- 塑木地板 -->
+        <div class="service-category">
+            <!-- 图标更换为：fa-border-all (网格铺装感，去除了树) -->
+            <i class="fas fa-border-all" style="font-size: 3rem; color: #0056b3; margin-bottom: 1rem;"></i>
+            <h3>Planchers de Terrasse</h3>
+            <p>Planchers composites</p >
+            <div class="single-img">
+                <img src="images/deck/deck-floor.jpg" alt="Planchers de Terrasse">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- 团队 -->
+    <section id="team" class="section">
+        <h2>Équipe</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="images/team/clive.jpg" alt="Clive Zhang">
+                <h3>Clive Zhang</h3>
+                <span class="title">Fondateur et PDG</span>
+                <p>Concepteur du modèle commercial, dirige la conception et la R&D des produits.</p >
+            </div>
+            <div class="team-member">
+                <img src="images/team/real.jpg" alt="Real Trudel">
+                <h3>Real Trudel</h3>
+                <span class="title">Directeur Technique et Qualité</span>
+                <p>Des dizaines d'années d'expérience sur le terrain, garantit la précision artisanale et la sécurité réglementaire.</p >
+            </div>
+            <div class="team-member">
+                <img src="images/team/helen.jpg" alt="Helen Chi">
+                <h3>Helen Chi</h3>
+                <span class="title">DGF et Expert en Supply Chain</span>
+                <p>Responsable de la trésorerie et de l'optimisation de la chaîne d'approvisionnement mondiale.</p >
+            </div>
+        </div>
+    </section>
+
+    <!-- 里程碑 -->
+    <!-- 修正后的里程碑部分，完全保留你提供的文字 -->
+    <section id="milestones" class="section">
+        <h2>Milestones</h2>
+        <div class="timeline">
+            <!-- 里程碑 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Juin 2025 : Validation du Projet</h3>
+                    <p>L'équipe a complété le premier projet de voisinage à Québec, validant le modèle "Design Canadien, Achat Chinois, Assemblage Canadien".</p >
+                </div>
+            </div>
+
+            <!-- 里程碑 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Juin 2025 : Enregistrement de l'Entreprise</h3>
+                    <p>Entreprise officiellement enregistrée, partenariat établi avec la chaîne d'approvisionnement chinoise.</p >
+                </div>
+            </div>
+
+            <!-- 里程碑 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Oct. 2025 : Construction de la Réputation</h3>
+                    <p>20 projets complétés dans la région de Montréal, bonne réputation acquise.</p >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+<style>
+    /* --- Projects 板块专用样式 --- */
+    #projects .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+    #projects h2 {
+        margin-bottom: 30px;
+        color: #333;
+    }
+    .gallery.grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 强制一行两列 -->
+        gap: 25px;
+    }
+    .gallery-item {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+        transform: translateY(-5px);
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 200px; /* 固定高度，让图片整齐划一 -->
+        object-fit: cover; /* 图片自适应裁剪 -->
+        display: block;
+    }
+    .gallery-item p {
+        padding: 15px 10px;
+        margin: 0;
+        font-size: 14px;
+        color: #555;
+    }
+
+    /* 手机端适配：屏幕太窄时变成一列 -->
+    @media (max-width: 600px) {
+        .gallery.grid-2 {
+            grid-template-columns: 1fr; /* 变为单列 -->
+        }
+    }
+</style>
+
+<!-- 项目展示 -->
+<section id="projects" class="section">
+    <style>
+        /* --- 强制内联样式：直接控制布局 --- */
+        #projects .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        #projects h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0D3B66;
+        }
+        
+        /* 核心：强制一行两个 -->
+        #projects .gallery.grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 👈 这就是一行两个的关键 -->
+            gap: 25px;
+        }
+        
+        /* 图片卡片：固定大小 -->
+        #projects .gallery-item {
+            height: 250px; /* 👈 图片区域的高度，可以调小这个数字 -->
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* 图片自适应 -->
+        #projects .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 👈 保持比例，填满方框 -->
+        }
+        
+        #projects .gallery-item p {
+            margin: 10px 0 0 0;
+            padding: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* 手机端：变成一列 -->
+        @media (max-width: 600px) {
+            #projects .gallery.grid-2 {
+                grid-template-columns: 1fr; /* 👈 屏幕窄了就变成一行一个 -->
+            }
+        }
+    </style>
+
+    <div class="container">
+        <h2>Nos Réalisations</h2>
+        <div class="gallery grid-2">
+            <!-- 图片 2 -->
+            <div class="gallery-item">
+                <img src="images/projects/project-2.jpg" alt="Clôture en verre pour piscine">
+                <p>Clôture en verre pour piscine</p >
+            </div>
+            <!-- 图片 3 -->
+            <div class="gallery-item">
+                <img src="images/projects/project-3.jpg" alt="Clôture en aluminium pour piscine">
+                <p>Clôture en aluminium pour piscine</p >
+            </div>
+            <!-- 图片 4 -->
+            <div class="gallery-item">
+                <img src="images/projects/project-4.jpg" alt="Clôture Deck">
+                <p>Clôture Deck</p >
+            </div>
+            <!-- 图片 5 -->
+            <div class="gallery-item">
+                <img src="images/projects/project-5.jpg" alt="Clôture de jardin">
+                <p>Clôture de jardin</p >
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 页脚 -->
+    <footer id="contact">
+        <h2>Contactez-nous</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> 438-725-3788</p >
+            <p><i class="fas fa-map-marker-alt"></i> 3683 Boulevard Taschereau, Longueuil, Québec J4T 2G3</p >
+            <p><i class="fas fa-envelope"></i> info@lesconstructionsallied.ca</p >
+        </div>
+        <p class="copyright">© 2026 Les Constructions Allied Inc. Tous droits réservés.</p >
+    </footer>
+</body>
+</html>
